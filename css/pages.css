@@ -25,6 +25,72 @@
   pointer-events: none;
 }
 
+.hero__unmute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(233, 196, 106, 0.45);
+  background: rgba(6, 8, 15, 0.42);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--gold-300);
+  font-family: inherit;
+  font-size: var(--fs-small, 0.95rem);
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hero__unmute:hover {
+  background: rgba(10, 14, 26, 0.6);
+  border-color: var(--gold-400);
+  color: var(--gold-400);
+}
+
+.hero__unmute.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.96);
+}
+
+.hero__unmute-icon { flex-shrink: 0; }
+
+.hero__sound-toggle {
+  position: absolute;
+  right: var(--space-6);
+  bottom: var(--space-6);
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(233, 196, 106, 0.32);
+  background: rgba(6, 8, 15, 0.42);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--warm-grey);
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.hero__sound-toggle:hover {
+  background: rgba(10, 14, 26, 0.6);
+  border-color: var(--gold-400);
+  color: var(--gold-400);
+}
+
+.hero__sound-icon { display: none; }
+.hero__sound-toggle[aria-pressed="false"] .hero__sound-icon--muted { display: block; }
+.hero__sound-toggle[aria-pressed="true"]  .hero__sound-icon--on    { display: block; }
+.hero__sound-toggle[aria-pressed="true"]  { color: var(--gold-400); }
+
 .hero__scroll-hint {
   position: absolute;
   bottom: var(--space-6);
@@ -63,7 +129,9 @@ html[data-lang="zh"] .hero__scroll-hint {
 @media (max-width: 768px) {
   .hero { min-height: 0; height: auto; aspect-ratio: 16 / 9; }
   .hero__video { object-fit: contain; }
-  .hero__scroll-hint { display: none; }
+  .hero__scroll-hint,
+  .hero__unmute,
+  .hero__sound-toggle { display: none; }
 }
 
 /* ================ PILLARS / STRATEGIC OBJECTIVE ================ */

@@ -139,7 +139,7 @@ html[data-lang="zh"] .primary-nav a {
 
 .menu-toggle span {
   width: 22px;
-  height: 1px;
+  height: 2px;
   background: var(--ivory);
   position: relative;
   transition: background var(--transition-fast);
@@ -151,7 +151,7 @@ html[data-lang="zh"] .primary-nav a {
   position: absolute;
   left: 0;
   width: 22px;
-  height: 1px;
+  height: 2px;
   background: var(--ivory);
   transition: transform var(--transition-base), top var(--transition-base);
 }
