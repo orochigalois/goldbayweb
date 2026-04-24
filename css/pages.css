@@ -61,7 +61,9 @@ html[data-lang="zh"] .hero__scroll-hint {
 }
 
 @media (max-width: 768px) {
-  .hero { min-height: 560px; height: 85vh; }
+  .hero { min-height: 0; height: auto; aspect-ratio: 16 / 9; }
+  .hero__video { object-fit: contain; }
+  .hero__scroll-hint { display: none; }
 }
 
 /* ================ PILLARS / STRATEGIC OBJECTIVE ================ */
