@@ -41,12 +41,14 @@
 }
 
 .site-logo img {
-  height: 50px;
+  height: 62px;
   width: auto;
-  transition: height var(--transition-base);
+  image-rendering: auto;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+  transition: height var(--transition-base), filter var(--transition-base);
 }
 
-.site-header.is-scrolled .site-logo img { height: 36px; }
+.site-header.is-scrolled .site-logo img { height: 44px; }
 
 .primary-nav {
   display: flex;
