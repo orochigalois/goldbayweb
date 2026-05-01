@@ -5,10 +5,8 @@
 
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduced) {
-      // Hide the video and rely on poster-like background
       video.removeAttribute('autoplay');
       video.pause();
-      video.style.display = 'none';
       return;
     }
 
