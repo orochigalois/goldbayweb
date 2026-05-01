@@ -54,18 +54,18 @@ button {
 }
 
 a {
-  color: var(--gold-400);
+  color: var(--gold-600);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 a:hover {
-  color: var(--gold-300);
+  color: var(--gold-500);
 }
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--gold-400);
+  outline: 2px solid var(--gold-500);
   outline-offset: 3px;
 }
 
@@ -87,8 +87,8 @@ ul, ol {
 }
 
 ::selection {
-  background: var(--gold-500);
-  color: var(--ink-900);
+  background: var(--gold-300);
+  color: var(--ink-deep);
 }
 
 /* bilingual toggle visibility — hide the off-language, preserve natural display type */
@@ -116,10 +116,10 @@ html[data-lang="zh"] [lang="en"] { display: none !important; }
   display: inline-block;
   font-family: var(--font-sans-en);
   font-size: var(--fs-micro);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
-  color: var(--gold-400);
+  color: var(--gold-600);
 }
 
 html[data-lang="zh"] .eyebrow {

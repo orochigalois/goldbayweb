@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Brand Palette Library — Wealth & Asset Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --font-serif: 'Cormorant Garamond', 'Source Han Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  --page-bg: #faf9f6;
+  --ink: #161616;
+  --ink-soft: #5a5a55;
+  --ink-mute: #8e8e87;
+  --rule: rgba(0,0,0,0.07);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--page-bg);
+  color: var(--ink);
+}
+
+/* =============== HERO =============== */
+.hero {
+  padding: 110px 9% 90px;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+.hero .eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--ink-mute);
+  margin-bottom: 28px;
+}
+.hero h1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+  margin: 0 0 24px;
+  max-width: 14ch;
+}
+.hero h1 em {
+  font-style: italic;
+  font-weight: 500;
+  color: #6e552f;
+}
+.hero .lede {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 560px;
+  margin: 0;
+  font-weight: 300;
+}
+.hero .meta {
+  position: absolute;
+  top: 110px;
+  right: 9%;
+  text-align: right;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  line-height: 1.9;
+}
+
+/* =============== PALETTE META BAR =============== */
+.palette-meta {
+  padding: 84px 9% 36px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 48px;
+  border-top: 1px solid var(--rule);
+}
+.palette-meta .index {
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+.palette-meta h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-style: italic;
+  font-size: 40px;
+  margin: 0 0 8px;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.palette-meta .desc {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+.palette-meta .chips {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.chip .dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.08);
+  flex-shrink: 0;
+}
+.chip .info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+.chip .hex {
+  font-family: 'Inter', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+.chip .role {
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-top: 2px;
+}
+
+/* =============== SHOWCASE SECTION =============== */
+.section {
+  padding: 70px 9% 110px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 64px;
+  position: relative;
+}
+
+.card { position: relative; }
+
+.card .num {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 34px;
+  padding-bottom: 18px;
+  position: relative;
+}
+
+.card .num::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 38px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.55;
+}
+
+.card h2 {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 0;
+  margin: 0 0 20px;
+  line-height: 1.2;
+}
+
+.card p {
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  line-height: 1.78;
+  margin: 0;
+  opacity: 0.78;
+  letter-spacing: 0.01em;
+  font-weight: 300;
+  max-width: 32ch;
+}
+
+/* footer */
+.footer {
+  padding: 70px 9% 90px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 11px;
+  color: var(--ink-mute);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+.footer .mark {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 18px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+
+@media (max-width: 960px) {
+  .hero { padding: 80px 7% 60px; }
+  .hero h1 { font-size: 48px; }
+  .hero .meta { display: none; }
+  .palette-meta {
+    grid-template-columns: 1fr;
+    padding: 60px 7% 28px;
+  }
+  .palette-meta h3 { font-size: 32px; }
+  .section {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 50px 7% 80px;
+  }
+  .chips { flex-wrap: wrap; }
+}
+
+/* =============== 20 PROFESSIONAL FINANCIAL PALETTES =============== */
+
+.palette1  { background:#f6f1e8; color:#2a2724; }  .palette1  .accent { color:#a8814a; }
+.palette2  { background:#0b1d33; color:#e6ecf4; }  .palette2  .accent { color:#7ab0f5; }
+.palette3  { background:#0e2a23; color:#dfeae3; }  .palette3  .accent { color:#9ec9a8; }
+.palette4  { background:#1a1a1c; color:#ececec; }  .palette4  .accent { color:#c9a96b; }
+.palette5  { background:#eef2f7; color:#1a2638; }  .palette5  .accent { color:#1f4e8c; }
+.palette6  { background:#efe8db; color:#3a2e25; }  .palette6  .accent { color:#9c6b3f; }
+.palette7  { background:#0a0a0a; color:#e8e3d6; }  .palette7  .accent { color:#b89968; }
+.palette8  { background:#f0f3f5; color:#2a3441; }  .palette8  .accent { color:#3a5a78; }
+.palette9  { background:#eaf1ec; color:#1c322a; }  .palette9  .accent { color:#1f6e54; }
+.palette10 { background:#0a1a2f; color:#dde6f1; }  .palette10 .accent { color:#5d8fc9; }
+.palette11 { background:#3d1f23; color:#ede4d4; }  .palette11 .accent { color:#d4b88a; }
+.palette12 { background:#e8dfd1; color:#3a2a1f; }  .palette12 .accent { color:#6b4226; }
+.palette13 { background:#e9eef3; color:#1a2638; }  .palette13 .accent { color:#1f3a6b; }
+.palette14 { background:#2e1f15; color:#e8dccb; }  .palette14 .accent { color:#c8a878; }
+.palette15 { background:#ebe5d6; color:#1c2a4e; }  .palette15 .accent { color:#3a4d80; }
+.palette16 { background:#22272e; color:#e2dccd; }  .palette16 .accent { color:#b58e3a; }
+.palette17 { background:#f0e6d2; color:#3d2818; }  .palette17 .accent { color:#7a4f2c; }
+.palette18 { background:#143038; color:#e6dcc6; }  .palette18 .accent { color:#cbb88a; }
+.palette19 { background:#e8e1dc; color:#2e1f28; }  .palette19 .accent { color:#6e3a4d; }
+.palette20 { background:#1c1f23; color:#d8cdb6; }  .palette20 .accent { color:#c4b294; }
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="meta">20 Directions<br>Wealth · Asset Mgmt<br>2026 Edition</div>
+  <div class="eyebrow">Brand Palette Library</div>
+  <h1>Refined identity, <em>chosen</em> not decorated.</h1>
+  <p class="lede">Twenty considered palettes for a wealth-management brand serving the global Chinese diaspora — drawn from the visual vocabulary of private banking, family-office stationery, and institutional asset houses.</p>
+</section>
+
+<!-- 01 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 01</div>
+    <h3>Private Banking Ivory</h3>
+    <p class="desc">Cream + bronze · the warmth of a UBS or Pictet annual report.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#f6f1e8"></span><div class="info"><span class="hex">#F6F1E8</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#a8814a"></span><div class="info"><span class="hex">#A8814A</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette1">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 02 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 02</div>
+    <h3>Institutional Navy</h3>
+    <p class="desc">Midnight + ice blue · the BlackRock institutional register.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#0b1d33"></span><div class="info"><span class="hex">#0B1D33</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#7ab0f5"></span><div class="info"><span class="hex">#7AB0F5</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette2">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 03 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 03</div>
+    <h3>Heritage Forest</h3>
+    <p class="desc">Deep forest + sage · the gravitas of legacy wealth.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#0e2a23"></span><div class="info"><span class="hex">#0E2A23</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#9ec9a8"></span><div class="info"><span class="hex">#9EC9A8</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette3">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 04 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 04</div>
+    <h3>Obsidian Luxe</h3>
+    <p class="desc">Graphite + champagne gold · private-wealth restraint.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#1a1a1c"></span><div class="info"><span class="hex">#1A1A1C</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#c9a96b"></span><div class="info"><span class="hex">#C9A96B</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette4">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 05 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 05</div>
+    <h3>Trust Slate</h3>
+    <p class="desc">Soft slate + corporate cobalt · Morgan Stanley measured.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#eef2f7"></span><div class="info"><span class="hex">#EEF2F7</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#1f4e8c"></span><div class="info"><span class="hex">#1F4E8C</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette5">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 06 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 06</div>
+    <h3>Pearl Bronze</h3>
+    <p class="desc">Warm pearl + refined copper · old-money discretion.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#efe8db"></span><div class="info"><span class="hex">#EFE8DB</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#9c6b3f"></span><div class="info"><span class="hex">#9C6B3F</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette6">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 07 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 07</div>
+    <h3>Onyx Aurum</h3>
+    <p class="desc">Pure onyx + muted gold · ultra-high-net-worth signal.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#0a0a0a"></span><div class="info"><span class="hex">#0A0A0A</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#b89968"></span><div class="info"><span class="hex">#B89968</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette7">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 08 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 08</div>
+    <h3>Cloud Steel</h3>
+    <p class="desc">Cool fog + steel blue · contemporary fintech clarity.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#f0f3f5"></span><div class="info"><span class="hex">#F0F3F5</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#3a5a78"></span><div class="info"><span class="hex">#3A5A78</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette8">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 09 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 09</div>
+    <h3>Jade Capital</h3>
+    <p class="desc">Soft jade + deep emerald · an Asia-wealth signature.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#eaf1ec"></span><div class="info"><span class="hex">#EAF1EC</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#1f6e54"></span><div class="info"><span class="hex">#1F6E54</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette9">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 10 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 10</div>
+    <h3>Midnight Sapphire</h3>
+    <p class="desc">Rich midnight + sapphire · institutional premium.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#0a1a2f"></span><div class="info"><span class="hex">#0A1A2F</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#5d8fc9"></span><div class="info"><span class="hex">#5D8FC9</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette10">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 11 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 11</div>
+    <h3>Burgundy Reserve</h3>
+    <p class="desc">Deep wine + parchment gold · old-world wine cellar.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#3d1f23"></span><div class="info"><span class="hex">#3D1F23</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#d4b88a"></span><div class="info"><span class="hex">#D4B88A</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette11">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 12 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 12</div>
+    <h3>Sandstone Mocha</h3>
+    <p class="desc">Warm desert + espresso · Mediterranean private office.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#e8dfd1"></span><div class="info"><span class="hex">#E8DFD1</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#6b4226"></span><div class="info"><span class="hex">#6B4226</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette12">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 13 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 13</div>
+    <h3>Arctic Cobalt</h3>
+    <p class="desc">Nordic pale + deep cobalt · Scandinavian refinement.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#e9eef3"></span><div class="info"><span class="hex">#E9EEF3</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#1f3a6b"></span><div class="info"><span class="hex">#1F3A6B</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette13">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 14 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 14</div>
+    <h3>Tobacco Heritage</h3>
+    <p class="desc">Leather library + tobacco gold · members-only club.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#2e1f15"></span><div class="info"><span class="hex">#2E1F15</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#c8a878"></span><div class="info"><span class="hex">#C8A878</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette14">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 15 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 15</div>
+    <h3>Linen Indigo</h3>
+    <p class="desc">Natural linen + ink · editorial broadsheet calm.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#ebe5d6"></span><div class="info"><span class="hex">#EBE5D6</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#1c2a4e"></span><div class="info"><span class="hex">#1C2A4E</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette15">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 16 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 16</div>
+    <h3>Storm Brass</h3>
+    <p class="desc">Storm cloud + brass · architectural and weighty.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#22272e"></span><div class="info"><span class="hex">#22272E</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#b58e3a"></span><div class="info"><span class="hex">#B58E3A</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette16">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 17 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 17</div>
+    <h3>Champagne Walnut</h3>
+    <p class="desc">Light champagne + walnut · grand-hotel correspondence.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#f0e6d2"></span><div class="info"><span class="hex">#F0E6D2</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#7a4f2c"></span><div class="info"><span class="hex">#7A4F2C</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette17">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 18 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 18</div>
+    <h3>Petrol Bone</h3>
+    <p class="desc">Deep petrol teal + bone · maritime chronograph.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#143038"></span><div class="info"><span class="hex">#143038</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#cbb88a"></span><div class="info"><span class="hex">#CBB88A</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette18">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 19 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 19</div>
+    <h3>Plum Stone</h3>
+    <p class="desc">Plaster + muted plum · subdued and unmistakable.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#e8e1dc"></span><div class="info"><span class="hex">#E8E1DC</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#6e3a4d"></span><div class="info"><span class="hex">#6E3A4D</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette19">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<!-- 20 -->
+<div class="palette-meta">
+  <div>
+    <div class="index">Palette 20</div>
+    <h3>Carbon Pearl</h3>
+    <p class="desc">Carbon + warm pearl · contemporary monochrome.</p>
+  </div>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#1c1f23"></span><div class="info"><span class="hex">#1C1F23</span><span class="role">Background</span></div></div>
+    <div class="chip"><span class="dot" style="background:#c4b294"></span><div class="info"><span class="hex">#C4B294</span><span class="role">Accent</span></div></div>
+  </div>
+</div>
+<div class="section palette20">
+  <div class="card"><span class="num accent">01 / Strategy</span><h2>战略定位</h2><p>专注服务全球华人的首选资产管理平台。</p></div>
+  <div class="card"><span class="num accent">02 / Service</span><h2>服务定位</h2><p>捕捉全球机会，传承家族财富。</p></div>
+  <div class="card"><span class="num accent">03 / Values</span><h2>投资价值观</h2><p>长期。专业。独立。</p></div>
+</div>
+
+<footer class="footer">
+  <span>Brand Palette Library · 20 Directions</span>
+  <span class="mark">Goldbay&nbsp;Group</span>
+  <span>Confidential · 2026</span>
+</footer>
+
+</body>
+</html>
