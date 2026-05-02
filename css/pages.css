@@ -549,6 +549,11 @@ html[data-lang="zh"] .stat__value {
   font-weight: 500;
 }
 
+.stat-num {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
 .stat__label {
   margin-top: var(--space-4);
   font-size: var(--fs-small);

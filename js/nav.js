@@ -43,6 +43,52 @@
     document
       .querySelectorAll('.pillars, .products-grid, .stats-grid, .insights-teaser, .team-grid, .presence, .insights-grid, .placeholder-grid')
       .forEach((c) => c.classList.add('reveal-stagger'));
+
+    // Prepare stat counters: wrap each digit run inside .stat__value as
+    // <span class="stat-num" data-target="N">0</span>. Runs synchronously
+    // (script is at end of body) so the page paints with zeros, not the
+    // final values, then the reveal observer animates them up.
+    document.querySelectorAll('.stat__value').forEach((statValue) => {
+      const walker = document.createTreeWalker(statValue, NodeFilter.SHOW_TEXT, null);
+      const numericNodes = [];
+      let node;
+      while ((node = walker.nextNode())) {
+        if (/\d/.test(node.nodeValue)) numericNodes.push(node);
+      }
+      numericNodes.forEach((textNode) => {
+        const frag = document.createDocumentFragment();
+        textNode.nodeValue.split(/(\d+)/).forEach((part) => {
+          if (!part) return;
+          if (/^\d+$/.test(part)) {
+            const span = document.createElement('span');
+            span.className = 'stat-num';
+            span.dataset.target = part;
+            span.textContent = '0';
+            frag.appendChild(span);
+          } else {
+            frag.appendChild(document.createTextNode(part));
+          }
+        });
+        textNode.parentNode.replaceChild(frag, textNode);
+      });
+    });
+  }
+
+  function animateStatNumbers(statEl, duration) {
+    const dur = duration || 1600;
+    const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+    statEl.querySelectorAll('.stat-num').forEach((el) => {
+      if (el.dataset.counted === '1') return;
+      el.dataset.counted = '1';
+      const target = parseInt(el.dataset.target, 10) || 0;
+      const start = performance.now();
+      const tick = (now) => {
+        const t = Math.min(1, (now - start) / dur);
+        el.textContent = String(Math.round(easeOutCubic(t) * target));
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
   }
 
   // mobile menu
@@ -112,6 +158,7 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
+            if (entry.target.matches('.stat')) animateStatNumbers(entry.target);
             revealObserver.unobserve(entry.target);
           }
         });
