@@ -195,9 +195,12 @@ html[data-lang="zh"] .primary-nav a {
 .menu-toggle span {
   width: 22px;
   height: 2px;
-  background: rgba(251, 249, 244, 0.88);
+  background: rgba(26, 21, 38, 0.88);
   position: relative;
   transition: background var(--transition-fast);
+}
+.is-scrolled .menu-toggle span {
+  background: rgba(251, 249, 244, 0.88);
 }
 
 .menu-toggle span::before,
@@ -207,10 +210,14 @@ html[data-lang="zh"] .primary-nav a {
   left: 0;
   width: 22px;
   height: 2px;
-  background: rgba(251, 249, 244, 0.88);
+  background: rgba(26, 21, 38, 0.88);
   transition:
     transform var(--transition-base),
     top var(--transition-base);
+}
+.is-scrolled .menu-toggle span::before,
+.is-scrolled .menu-toggle span::after {
+  background: rgba(251, 249, 244, 0.88);
 }
 
 .menu-toggle span::before {
