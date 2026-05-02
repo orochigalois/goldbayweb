@@ -1,6 +1,6 @@
 (function () {
   const STORAGE_KEY = 'goldbay-lang';
-  const DEFAULT_LANG = 'en';
+  const DEFAULT_LANG = 'zh';
   const VALID = ['en', 'zh'];
 
   function getStoredLang() {
