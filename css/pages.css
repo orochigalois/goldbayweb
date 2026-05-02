@@ -22,12 +22,18 @@
 }
 
 @keyframes heroKenBurns {
-  0%   { transform: scale(1.04) translate3d(0, 0, 0); }
-  100% { transform: scale(1.12) translate3d(-1.2%, -0.8%, 0); }
+  0% {
+    transform: scale(1.04) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.12) translate3d(-1.2%, -0.8%, 0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__video { animation: none; }
+  .hero__video {
+    animation: none;
+  }
 }
 
 .hero__scrim {
@@ -1441,16 +1447,32 @@ html[data-lang="zh"] .contact-meta dt {
 }
 
 @keyframes revealIn {
-  from { opacity: 0; transform: translate3d(0, 28px, 0); }
-  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 /* Stagger children inside any container marked .reveal-stagger */
-.reveal-stagger > .reveal.is-visible:nth-child(2) { animation-delay: 90ms; }
-.reveal-stagger > .reveal.is-visible:nth-child(3) { animation-delay: 180ms; }
-.reveal-stagger > .reveal.is-visible:nth-child(4) { animation-delay: 270ms; }
-.reveal-stagger > .reveal.is-visible:nth-child(5) { animation-delay: 360ms; }
-.reveal-stagger > .reveal.is-visible:nth-child(6) { animation-delay: 450ms; }
+.reveal-stagger > .reveal.is-visible:nth-child(2) {
+  animation-delay: 90ms;
+}
+.reveal-stagger > .reveal.is-visible:nth-child(3) {
+  animation-delay: 180ms;
+}
+.reveal-stagger > .reveal.is-visible:nth-child(4) {
+  animation-delay: 270ms;
+}
+.reveal-stagger > .reveal.is-visible:nth-child(5) {
+  animation-delay: 360ms;
+}
+.reveal-stagger > .reveal.is-visible:nth-child(6) {
+  animation-delay: 450ms;
+}
 
 /* Gold rule slides out from a hairline — only collapses when its ancestor
    has been tagged as a reveal target, so rules outside observed regions
@@ -1470,8 +1492,12 @@ html[data-lang="zh"] .contact-meta dt {
 }
 
 @keyframes goldRuleIn {
-  from { transform: scaleX(0); }
-  to   { transform: scaleX(1); }
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 .section-title {
@@ -1519,8 +1545,14 @@ html[data-lang="zh"] .contact-meta dt {
 }
 
 @keyframes statValueIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Hero scroll hint — gentle bob to invite the snap, plus initial fade */
@@ -1531,13 +1563,24 @@ html[data-lang="zh"] .contact-meta dt {
 }
 
 @keyframes heroHintFade {
-  from { opacity: 0; transform: translate(-50%, 12px); }
-  to   { opacity: 0.85; transform: translate(-50%, 0); }
+  from {
+    opacity: 0;
+    transform: translate(-50%, 12px);
+  }
+  to {
+    opacity: 0.85;
+    transform: translate(-50%, 0);
+  }
 }
 
 @keyframes heroHintFloat {
-  0%, 100% { transform: translate(-50%, 0); }
-  50%      { transform: translate(-50%, 6px); }
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 6px);
+  }
 }
 
 .hero__sound-toggle {
@@ -1545,18 +1588,25 @@ html[data-lang="zh"] .contact-meta dt {
 }
 
 @keyframes heroFadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.hero__unmute {
-  /* preserve original centered transform */
-  animation: heroUnmuteIn 1100ms cubic-bezier(0.22, 1, 0.36, 1) 600ms both;
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes heroUnmuteIn {
-  from { opacity: 0; transform: translate(-50%, calc(-50% + 12px)) scale(0.96); }
-  to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 12px)) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 /* Strategy visual photo: slow ken-burns on view */
@@ -1565,8 +1615,12 @@ html[data-lang="zh"] .contact-meta dt {
 }
 
 @keyframes photoDrift {
-  0%   { transform: scale(1.02) translate3d(0, 0, 0); }
-  100% { transform: scale(1.08) translate3d(-1.2%, -0.6%, 0); }
+  0% {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.08) translate3d(-1.2%, -0.6%, 0);
+  }
 }
 
 /* Card icons get a soft entrance flicker once their card reveals */
@@ -1577,9 +1631,18 @@ html[data-lang="zh"] .contact-meta dt {
 }
 
 @keyframes iconPop {
-  0%   { opacity: 0; transform: translateY(-6px) scale(0.92); }
-  60%  { opacity: 1; transform: translateY(0) scale(1.04); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
+  0% {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.92);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0) scale(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* CTA button breathing pulse to draw attention when in view */
@@ -1588,7 +1651,8 @@ html[data-lang="zh"] .contact-meta dt {
 }
 
 @keyframes ctaPulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow:
       0 1px 0 rgba(255, 255, 255, 0.35) inset,
       0 4px 14px -6px rgba(168, 123, 30, 0.45);
